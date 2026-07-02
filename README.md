@@ -35,6 +35,36 @@ python scripts/github_enrich.py <github-username-or-url>
 Set `GITHUB_TOKEN` to raise the GitHub API limit from 60/hr to 5000/hr. Then ask
 Claude to `audit`, `simulate`, or `optimize` a resume.
 
+## Example
+
+**You:** "Simulate the hiring-agent score for my resume and tell me where I'm losing points."
+
+**Claude** runs the enrichment script, which reports the same classification the
+screener computes:
+
+```json
+{
+  "username": "example-dev",
+  "public_repos": 23,
+  "open_source_repos": 0,
+  "self_project_repos": 15,
+  "all_repos_are_self_project": true,
+  "open_source_cap_triggered": true
+}
+```
+
+Then it scores the resume and returns a gap table sorted by point-swing:
+
+| Category | Score | Ceiling | Highest-leverage fix |
+| --- | --- | --- | --- |
+| open_source | 8 / 35 | +25 | land one merged PR to a 1000+ star repo (personal repos are capped at ~10) |
+| self_projects | 23 / 30 | +7 | add a working live-demo URL to each project |
+| production | 20 / 25 | +5 | quantify scale/impact of shipped work |
+| technical_skills | 9 / 10 | +1 | already near max |
+| bonus | 6 / 20 | +3 | add the portfolio/blog URL that is missing from the resume |
+
+Every suggestion is a real, honest action; the skill never invents experience.
+
 ## Contents
 
 | Path | Purpose |
