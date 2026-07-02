@@ -187,8 +187,10 @@ def main():
         print(f"\nOPPORTUNITY: owned repos are all self_project (agent would cap "
               f"open_source at ~10), BUT you have {n} merged PR(s) to OTHER "
               "people's repos. That is the strongest open_source signal in the "
-              "rubric and the agent misses it. LIST these PRs on the resume so "
-              "it gets credited. See external_merged_prs above.", file=sys.stderr)
+              "rubric and the agent misses it. List the SUBSTANTIVE ones on the "
+              "resume (repo, stars, what changed, outcome) so it gets credited. "
+              "Drop typo/one-line PRs; a human reviewer counts quality, not count. "
+              "See external_merged_prs above.", file=sys.stderr)
     elif result.get("open_source_cap_triggered"):
         print("\nNOTE: every inspected repo is single-contributor (self_project) "
               "and no external merged PRs were found. The rubric caps open_source "

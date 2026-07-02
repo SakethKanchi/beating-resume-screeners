@@ -137,3 +137,12 @@ star count, and what the PR did), because the agent scores what the resume
 states plus the owned-repo scan. `scripts/github_enrich.py` reports these as
 `external_merged_prs` so they can be surfaced.
 
+Caveat for the human reviewer (not the bot): only list PRs that are **merged and
+substantive**. This matches mainstream FAANG resume guidance (Tech Interview
+Handbook, CPRW resume writers), whose own examples list repo contributions with
+a named project, what changed, and a measurable outcome. Their filter test: if a
+hiring manager opened the PR, would it prompt a follow-up question? Typo or
+one-line fixes fail it and should be omitted, and rejected or still-open PRs
+never belong on a resume. Padding with trivial PRs helps the bot's count but
+hurts you with a human reader.
+

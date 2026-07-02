@@ -58,7 +58,13 @@ Full point breakdown, caps, and every deduction: see [references/RUBRIC.md](refe
 1. **Fix open_source (up to +25).** Personal-repo-only profiles are capped at
    ~10/35. Earn real points with a merged PR to a popular repo (1000+ stars),
    or a genuine second contributor on an existing project so it reclassifies as
-   `open_source`. Surface merged PRs the resume never mentioned.
+   `open_source`. Surface merged PRs the resume never mentioned, but only list
+   ones that are **merged and substantive**. A real resume reviewer applies this
+   test: if a hiring manager opened that PR, would they feel something worth a
+   follow-up question? Typo or one-line fixes fail it and should be left off;
+   listing trivial PRs hurts a resume with a human reader even if a bot counts
+   them. List each with the project name, star count, what you changed, and an
+   outcome. Do not list rejected or still-open PRs.
 2. **Add a working live demo URL to every project** (+10-20% on self_projects;
    avoids -3 to -5 per unlinked project).
 3. **Ensure the resume's GitHub username is exact and top repos have 4+ of the
@@ -108,9 +114,11 @@ Critically, the script also reports `external_merged_pr_count` and
 `external_merged_prs`: merged PRs the candidate made to OTHER people's repos.
 This is the strongest open_source signal in the rubric, and the screener's
 owned-repo scan does not see it. When `hidden_open_source_signal` is true, the
-candidate is being under-scored: the fix is to LIST those PRs on the resume
-(with repo name and star count) so the agent credits them, not to accept the
-cap.
+candidate is being under-scored: the fix is to list the **substantive** ones on
+the resume (repo name, star count, what changed, and an outcome) so the agent
+credits them, not to accept the cap. Filter first: drop typo or one-line PRs,
+and never list rejected or still-open ones. Quality of the entry matters to the
+human reviewer as much as the count matters to the bot.
 
 ### Step 3: Score against the rubric
 
