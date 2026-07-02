@@ -1,5 +1,5 @@
 ---
-name: beating-resume-screeners
+name: resume-radar
 description: >-
   Audits and optimizes a resume against automated LLM resume-screening agents,
   reproducing the exact 120-point rubric from HackerRank's open-source
@@ -17,7 +17,7 @@ license: MIT
 compatibility: Requires Python 3.8+ and internet access to the GitHub REST API. A GITHUB_TOKEN env var is optional but raises the rate limit from 60/hr to 5000/hr.
 ---
 
-# Beating Resume Screeners
+# Resume Radar
 
 Optimize a resume to win against LLM resume-scoring agents. The rubric here is
 reverse-engineered from HackerRank's open-source `interviewstreet/hiring-agent`,

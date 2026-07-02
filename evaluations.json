@@ -2,7 +2,7 @@
   "description": "Evaluations for the beating-resume-screeners skill. No built-in runner exists; these are behavioral rubrics for manual or scripted grading, per Anthropic's Skill best-practices.",
   "evaluations": [
     {
-      "skills": ["beating-resume-screeners"],
+      "skills": ["resume-radar"],
       "query": "Simulate the hiring-agent score for this resume and tell me where I'm losing points.",
       "files": ["test-files/personal-repos-only-resume.pdf"],
       "expected_behavior": [
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "skills": ["beating-resume-screeners"],
+      "skills": ["resume-radar"],
       "query": "Optimize my resume to pass automated screening.",
       "files": ["test-files/candidate-resume.pdf"],
       "expected_behavior": [
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "skills": ["beating-resume-screeners"],
+      "skills": ["resume-radar"],
       "query": "Rank my resume against the resume bot and show the exact JSON the agent would output.",
       "files": ["test-files/strong-candidate-resume.pdf"],
       "expected_behavior": [

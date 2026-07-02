@@ -1,4 +1,4 @@
-# beating-resume-screeners
+# Resume Radar
 
 A [Claude Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
 that audits and optimizes a resume against automated **LLM resume-screening
@@ -22,7 +22,7 @@ gaps, using **real signals and honest framing only**.
 ## Install
 
 **Claude Code / claude.ai / API:** place this folder so `SKILL.md` sits at the
-skill root (for Claude Code, drop it in `~/.claude/skills/beating-resume-screeners/`).
+skill root (for Claude Code, drop it in `~/.claude/skills/resume-radar/`).
 The skill auto-activates on prompts like "simulate my resume score" or "help me
 beat the resume bot".
 
